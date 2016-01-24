@@ -8,7 +8,7 @@ if(json_decode($_POST['payload'])->ref=='refs/heads/master'){
 	fclose($file);
 }else{
 	$file = fopen("log.txt", "a");
-	fwrite($file, json_decode($_POST)[0]->ref . PHP_EOL);
+	fwrite($file, json_decode($_POST)[0]['ref'] . PHP_EOL);
 	fclose($file);
 }
 	

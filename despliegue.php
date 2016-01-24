@@ -164,5 +164,8 @@ $pay=json_decode('{
   }
 }');
 if($pay && $pay->ref=='refs/heads/master'){
+	echo '<pre>';
+	print_r($pay);
+	exit;
 }
 ?>

@@ -11,6 +11,7 @@ if($payload->ref && $payload->ref=='refs/heads/master'){
 }else{
 	$file = fopen("log.txt", "a");
 	fwrite($file, $hora . PHP_EOL);
+	fwrite($file, $payload . PHP_EOL);
 	fclose($file);
 }
 	

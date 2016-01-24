@@ -1,3 +1,5 @@
 <?php 
-echo '<h1>funciona</h1>';
+$pay=json_decode($_POST['payload']);
+if($pay && $pay->ref=='master'){
+}
 ?>

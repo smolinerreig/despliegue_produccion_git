@@ -5,8 +5,9 @@ echo $hora;
 	if(!file_exists('log.txt')){
 		shell_exec('touch log.txt');
 		shell_exec('echo'.$hora.'  >> log.txt');
-		shell_exec('echo'.print_r($_POST).'  >> log.txt');
+		shell_exec('echo '.print_r($_POST).'  >> log.txt');
 	}else{
+
 		shell_exec('echo '.$hora.' >> log.txt');
 	}
 //}

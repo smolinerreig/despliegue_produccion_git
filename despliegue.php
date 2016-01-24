@@ -3,7 +3,6 @@ $hora='Actualización del servidor a las '.getdate()['hours'].':'.getdate()['min
 $payload = json_decode($_POST['payload']);
 echo $hora;
 echo $payload; 
-
 $file = fopen("log.txt", "a");
 	fwrite($file, $hora . PHP_EOL);
 	fwrite($file, $payload->ref . PHP_EOL);

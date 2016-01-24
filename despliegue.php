@@ -8,7 +8,8 @@ foreach($payload as $p){
 	fwrite($file, $payload->ref . PHP_EOL);
 	
 }
-fclose($file);
+fclose($file); 
+
 /*if($payload->ref=='refs/heads/master'){
 	$file = fopen("log.txt", "a");
 	fwrite($file, $hora . PHP_EOL);

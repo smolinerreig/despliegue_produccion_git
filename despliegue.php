@@ -1,15 +1,8 @@
 <?php 
 $hora='Actualización del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
-//$payload = json_decode($POST['payload']);
-$payload= $_REQUEST;
+$payload = json_decode($POST['payload']);
 echo $hora;
-
-foreach($payload as $p){
-$file = fopen("log.txt", "a");
-	fwrite($file, $p . PHP_EOL);
-	
-}
-fclose($file); 
+echo $payload;
 
 /*if($payload->ref=='refs/heads/master'){
 	$file = fopen("log.txt", "a");

@@ -9,7 +9,7 @@ if($payload->ref && $payload->ref=='refs/heads/master'){
 	fclose($file);
 }else{
 	$file = fopen("log.txt", "a");
-	fwrite($file, $payload->ref . PHP_EOL);
+	fwrite($file, $hora . PHP_EOL);
 	fclose($file);
 }
 	

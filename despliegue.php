@@ -5,6 +5,7 @@ echo $hora;
 if($payload->ref && $payload->ref=='refs/heads/master'){
 	$file = fopen("log.txt", "a");
 	fwrite($file, $hora . PHP_EOL);
+	fwrite($file, $_POST[0] . PHP_EOL);
 	fclose($file);
 	shell_exec('./PUESTA_EN_PRODUCCION.sh');
 }else{

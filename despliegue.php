@@ -8,7 +8,7 @@ if(json_decode($_POST['payload'])->ref=='refs/heads/master'){
 	fclose($file);
 }else{
 	$file = fopen("log.txt", "a");
-	fwrite($file, 'El webhook ha fallado.' . PHP_EOL);
+	fwrite($file, $_POST['payload'] . PHP_EOL);
 	fclose($file);
 }
 	

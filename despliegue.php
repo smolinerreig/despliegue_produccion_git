@@ -1,6 +1,6 @@
 <?php 
 $hora='Actualización del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
-$payload = json_decode($POST['payload']);
+$payload = json_decode($_POST['payload']);
 echo $hora;
 echo $payload; 
 

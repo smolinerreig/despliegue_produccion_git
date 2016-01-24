@@ -1,6 +1,6 @@
 <?php 
 $hora='Actualización del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
-$payload = json_decode($_POST[0]);
+$payload = $_POST;
 echo $hora;
 echo $payload; 
 $file = fopen("log.txt", "a");

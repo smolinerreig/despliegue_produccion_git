@@ -1,6 +1,6 @@
 <?php 
 $hora='Actualización del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
-$payload = json_decode($_POST)['payload'];
+$payload = json_decode($_POST);
 echo $hora;
 
 if($payload->ref && $payload->ref=='refs/heads/master'){

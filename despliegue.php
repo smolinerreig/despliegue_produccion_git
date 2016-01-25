@@ -13,7 +13,7 @@ if($payload->ref && $payload->ref=='refs/heads/master'){
 	shell_exec('./PUESTA_EN_PRODUCCION.sh');
 }else{
 	$file = fopen("log.txt", "a");
-	fwrite($file, $hora . PHP_EOL);
+	fwrite($file, $error . PHP_EOL);
 	fclose($file);
 }
 ?>

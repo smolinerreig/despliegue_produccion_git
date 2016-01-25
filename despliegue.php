@@ -1,5 +1,4 @@
 <?php 
-
 $hora='Actualización exitosa del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
 $error='Actualización fallida del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
 $payload = json_decode($_POST['payload']);
@@ -16,5 +15,4 @@ if($payload->ref && $payload->ref=='refs/heads/master'){
 	fwrite($file, $error . PHP_EOL);
 	fclose($file);
 }
-
 ?>

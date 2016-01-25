@@ -5,7 +5,6 @@ echo $hora;
 $file = fopen("log.txt", "a");
 	fwrite($file, count($payload) . PHP_EOL);
 	fclose($file);
-	
 if($payload->ref && $payload->ref=='refs/heads/master'){
 	$file = fopen("log.txt", "a");
 	fwrite($file, $hora . PHP_EOL);

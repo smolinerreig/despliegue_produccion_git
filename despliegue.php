@@ -1,6 +1,6 @@
 <?php 
 $hora='Actualización exitosa del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
-$error='Actualización fallida del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
+$error='Actualización (no-master) del servidor a las '.getdate()['hours'].':'.getdate()['minutes'].':'.getdate()['seconds'];
 $payload = json_decode($_POST['payload']);
 
 echo $hora;
